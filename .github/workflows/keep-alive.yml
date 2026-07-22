@@ -1,7 +1,7 @@
 name: Keep API warm
 on:
   schedule:
-    - cron: '*/10 * * * *'   # every 10 min — under Render free tier's 15-min idle sleep
+    - cron: '*/10 * * * *'   # every 10 min — under Render free tier's 15-min idle sle ep
   workflow_dispatch:
 jobs:
   ping:
