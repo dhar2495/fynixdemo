@@ -1,0 +1,17 @@
+{
+  "name": "SyslaFynix-automation-web-api",
+  "version": "1.0.0",
+  "description": "Playwright automation for SyslaFynix — web UI + API.",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:web": "playwright test --project=web-chromium",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^20.14.9",
+    "typescript": "^5.5.3"
+  }
+}

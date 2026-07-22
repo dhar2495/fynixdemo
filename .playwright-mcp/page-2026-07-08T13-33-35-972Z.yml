@@ -1,0 +1,17 @@
+- generic [ref=f7e7]:
+  - generic [ref=f7e8]:
+    - generic [ref=f7e10]: SyslaFynix
+    - generic [ref=f7e11]: Finance
+  - generic [ref=f7e12]:
+    - generic [ref=f7e13]: Sign in
+    - generic [ref=f7e14]: Email
+    - textbox "login-email" [ref=f7e16]:
+      - /placeholder: you@example.com
+      - text: demo@SyslaFynix.dev
+    - generic [ref=f7e17]: Password
+    - textbox "login-password" [ref=f7e19]:
+      - /placeholder: ••••••••
+      - text: Demo@123
+    - generic "login-submit" [ref=f7e20] [cursor=pointer]:
+      - generic [ref=f7e21]: Sign in
+    - generic [ref=f7e22]: "Demo: demo@SyslaFynix.dev / Demo@123"

@@ -1,0 +1,90 @@
+- generic [ref=f7e5]:
+  - generic [ref=f7e26]:
+    - generic [ref=f7e27]:
+      - generic [ref=f7e28]: 
+      - generic [ref=f7e29]: SyslaFynix
+    - generic [ref=f7e30]:
+      - generic "tab-dashboard" [ref=f7e31] [cursor=pointer]:
+        - generic [ref=f7e32]: 
+        - generic [ref=f7e33]: Dashboard
+      - generic "tab-transactions" [ref=f7e34] [cursor=pointer]:
+        - generic [ref=f7e35]: 
+        - generic [ref=f7e36]: Transactions
+      - generic "tab-loan" [ref=f7e37] [cursor=pointer]:
+        - generic [ref=f7e38]: 
+        - generic [ref=f7e39]: Loan
+      - generic "tab-settings" [ref=f7e40] [cursor=pointer]:
+        - generic [ref=f7e41]: 
+        - generic [ref=f7e42]: Settings
+  - generic [ref=f7e50]:
+    - generic [ref=f7e51]:
+      - generic [ref=f7e52]:
+        - generic [ref=f7e53]: Good to see you,
+        - generic [ref=f7e54]: Demo
+      - generic [ref=f7e55]:
+        - generic "dashboard-refresh" [ref=f7e56] [cursor=pointer]:
+          - generic [ref=f7e57]: 
+        - generic [ref=f7e59]: DA
+    - generic [ref=f7e61]:
+      - generic [ref=f7e62]:
+        - generic [ref=f7e63]: 
+        - generic [ref=f7e64]:
+          - generic [ref=f7e65]: 5% cashback
+          - generic [ref=f7e66]: On electricity bill payments
+        - generic "banner-dismiss-o1" [ref=f7e67] [cursor=pointer]:
+          - generic [ref=f7e68]: 
+      - generic [ref=f7e69]:
+        - generic [ref=f7e70]: 
+        - generic [ref=f7e71]:
+          - generic [ref=f7e72]: Refer & earn ₹100
+          - generic [ref=f7e73]: Invite friends to SyslaFynix
+        - generic "banner-dismiss-o2" [ref=f7e74] [cursor=pointer]:
+          - generic [ref=f7e75]: 
+      - generic [ref=f7e76]:
+        - generic [ref=f7e77]: 
+        - generic [ref=f7e78]:
+          - generic [ref=f7e79]: Zero markup
+          - generic [ref=f7e80]: On international transfers
+        - generic "banner-dismiss-o3" [ref=f7e81] [cursor=pointer]:
+          - generic [ref=f7e82]: 
+    - generic [ref=f7e83]:
+      - generic "quick-action-send" [ref=f7e84] [cursor=pointer]:
+        - generic [ref=f7e86]: 
+        - generic [ref=f7e87]: Send money
+      - generic "quick-action-recharge" [ref=f7e88] [cursor=pointer]:
+        - generic [ref=f7e90]: 
+        - generic [ref=f7e91]: Recharge
+      - generic "quick-action-electricity" [ref=f7e92] [cursor=pointer]:
+        - generic [ref=f7e94]: 
+        - generic [ref=f7e95]: Electricity
+      - generic "quick-action-dth" [ref=f7e96] [cursor=pointer]:
+        - generic [ref=f7e98]: 
+        - generic [ref=f7e99]: DTH / Bills
+    - generic [ref=f7e100]:
+      - generic [ref=f7e101]: Current balance
+      - generic "kpi-balance-value" [ref=f7e102]: ₹3,22,000.00
+      - generic [ref=f7e106]:
+        - generic [ref=f7e109]: Income ₹1,12,500.00
+        - generic [ref=f7e112]: Expenses ₹40,500.00
+    - generic [ref=f7e113]:
+      - generic [ref=f7e114]:
+        - generic [ref=f7e116]: 
+        - generic [ref=f7e117]: Income
+        - generic "kpi-income-value" [ref=f7e118]: ₹1,12,500.00
+      - generic [ref=f7e119]:
+        - generic [ref=f7e121]: 
+        - generic [ref=f7e122]: Expenses
+        - generic "kpi-expense-value" [ref=f7e123]: ₹40,500.00
+      - generic [ref=f7e124]:
+        - generic [ref=f7e126]: 
+        - generic [ref=f7e127]: Net movement
+        - generic "kpi-net-value" [ref=f7e128]: ₹72,000.00
+      - generic [ref=f7e129]:
+        - generic [ref=f7e131]: 
+        - generic [ref=f7e132]: Transactions
+        - generic [ref=f7e133]: "8"
+    - generic [ref=f7e134]:
+      - generic [ref=f7e135]:
+        - generic [ref=f7e136]: 
+        - generic [ref=f7e137]: How these are calculated
+      - generic [ref=f7e138]: Net = income − expenses. Current balance = sum of account opening balances + net. Every value here is derived live from the transactions, never hardcoded — add or delete a transaction and pull to refresh to see it change.

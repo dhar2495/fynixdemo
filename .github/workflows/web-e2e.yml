@@ -1,0 +1,32 @@
+name: Web E2E
+on:
+  push: { branches: [main, master] }
+  workflow_dispatch:
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Start API
+        working-directory: api
+        run: |
+          npm install && npm run build
+          node dist/server.js &
+          npx wait-on http://localhost:4000/api/health
+      - name: Build + serve Expo web
+        working-directory: app
+        env: { EXPO_PUBLIC_API_URL: http://localhost:4000/api }
+        run: |
+          npm install
+          npx expo export --platform web --output-dir dist
+          npx serve -s dist -l 8081 &
+          npx wait-on http://localhost:8081
+      - name: Playwright web suite
+        working-directory: automation/web-api
+        env: { WEB_URL: http://localhost:8081 }
+        run: |
+          npm install
+          npx playwright install --with-deps chromium
+          npx playwright test --project=web-chromium

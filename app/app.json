@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "SyslaFynix",
+    "slug": "SyslaFynix-finance",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "SyslaFynix",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#2B4BAD",
+      "resizeMode": "contain"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "dev.SyslaFynix.finance"
+    },
+    "android": {
+      "package": "dev.SyslaFynix.finance",
+      "adaptiveIcon": {
+        "backgroundColor": "#2B4BAD"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "extra": {
+      "apiBaseUrl": "http://localhost:4000/api"
+    },
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

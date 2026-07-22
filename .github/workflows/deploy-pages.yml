@@ -1,0 +1,48 @@
+name: Deploy web + Swagger to GitHub Pages
+on:
+  push: { branches: [main, master] }
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      # 1. Export the OpenAPI spec from the API
+      - name: Export openapi.json
+        working-directory: api
+        run: |
+          npm install && npm run build
+          node -e "const fs=require('fs');fs.writeFileSync('openapi.json',JSON.stringify(require('./dist/openapi').openapiSpec,null,2))"
+      # 2. Build the Expo web bundle
+      - name: Build Expo web
+        working-directory: app
+        env: { EXPO_PUBLIC_API_URL: "${{ vars.PUBLIC_API_URL }}" }
+        run: |
+          npm install
+          node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('app.json'));c.expo.experiments={...c.expo.experiments,baseUrl:'/${{ github.event.repository.name }}'};fs.writeFileSync('app.json',JSON.stringify(c,null,2))"
+          npx expo export --platform web --output-dir dist
+      # 3. Assemble the Pages site: web app at /, static Swagger at /api-docs
+      - name: Assemble site
+        run: |
+          mkdir -p site
+          cp -r app/dist/* site/
+          mkdir -p site/api-docs
+          cp docs/swagger-static/index.html site/api-docs/index.html
+          cp api/openapi.json site/api-docs/openapi.json
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

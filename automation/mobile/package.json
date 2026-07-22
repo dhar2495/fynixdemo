@@ -1,0 +1,22 @@
+{
+  "name": "SyslaFynix-automation-mobile",
+  "version": "1.0.0",
+  "description": "Appium + WebdriverIO automation for SyslaFynix (Android + iOS).",
+  "scripts": {
+    "android": "wdio run ./config/wdio.android.conf.ts",
+    "ios": "wdio run ./config/wdio.ios.conf.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@wdio/appium-service": "^8.40.0",
+    "@wdio/cli": "^8.40.0",
+    "@wdio/local-runner": "^8.40.0",
+    "@wdio/mocha-framework": "^8.40.0",
+    "@wdio/spec-reporter": "^8.40.0",
+    "appium": "^2.11.0",
+    "appium-uiautomator2-driver": "^3.7.0",
+    "appium-xcuitest-driver": "^7.24.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

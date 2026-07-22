@@ -1,0 +1,17 @@
+{
+  "cli": { "version": ">= 5.9.0" },
+  "build": {
+    "preview-apk": {
+      "android": { "buildType": "apk" },
+      "distribution": "internal"
+    },
+    "production": {
+      "android": { "buildType": "app-bundle" },
+      "ios": { "distribution": "store" }
+    },
+    "ios-adhoc": {
+      "ios": { "distribution": "internal", "simulator": false }
+    }
+  },
+  "submit": { "production": {} }
+}
