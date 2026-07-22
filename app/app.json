@@ -28,7 +28,7 @@
       "output": "single"
     },
     "extra": {
-      "apiBaseUrl": "http://localhost:4000/api"
+      "apiBaseUrl": "https://fynixdemo.onrender.com/api"
     },
     "plugins": [
       "expo-font"

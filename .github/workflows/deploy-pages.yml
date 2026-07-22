@@ -24,7 +24,6 @@ jobs:
         working-directory: app
         env: { EXPO_PUBLIC_API_URL: "${{ vars.PUBLIC_API_URL }}" }
         run: |
-          echo "DEBUG EXPO_PUBLIC_API_URL=[$EXPO_PUBLIC_API_URL]"
           npm install
           node -e "const fs=require('fs');const c=JSON.parse(fs.readFileSync('app.json'));c.expo.experiments={...c.expo.experiments,baseUrl:'/${{ github.event.repository.name }}'};fs.writeFileSync('app.json',JSON.stringify(c,null,2))"
           npx expo export --platform web --output-dir dist

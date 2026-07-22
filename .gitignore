@@ -10,3 +10,4 @@ playwright-report/
 test-results/
 openapi.json
 api/public/
+/.playwright-mcp
